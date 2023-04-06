@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+:root {
+  --primary-col-orange: #F48024;
+  --primary-col-dark: #0E0B0A;  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-color: var(--primary-col-dark);
+  font-family: 'Outfit', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+}
+
+a:hover {
+ cursor: pointer; 
+ opacity: 0.8; 
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+
+h1 {
+  font-size: 4rem;
+  margin: 0.5rem 0;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+nav {
+  padding-top:1rem;
+  padding-bottom:1rem;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  background-color: var(--primary-col-dark);
+
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.other-nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.footer-normal {
+  display: flex;
+  position: static;
+  width: 100%;
+  margin-top: auto;
+  justify-content: center;
+}
+
+.footer-login {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0px;
+  width: 80%;
+}
+
+footer a {
+  display: block;
+  padding: 1rem;
+}
+
+.container {
+  height: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.greeting {
+  margin-left: 1rem;
+  margin-top: 5rem;
+  color: white;
+}
+
+
+@media screen and (max-width: 1600px) {
+  #root {
+    overflow: auto;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  #root {
+    overflow: auto;
+  }
+}
+
+
+@media screen and (max-width: 1600px) {
+  footer {
+    position: static;
+    margin-top: auto;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+.burger-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  z-index: 10000;
+}
+
+.burger-icon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.burger-icon:active {
+  transform: scale(0.9);
+}
+
+
+.navbar-hamburger-page {
+  position: fixed;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

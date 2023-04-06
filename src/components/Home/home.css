@@ -1,0 +1,252 @@
+.home-container-glow {
+    background: linear-gradient(-45deg, #D92020, #D94C20, #D96C20); 
+    background-size: 400% 400%;
+    animation: change-gradient 10s ease infinite;
+
+    height: auto;
+    margin-top: 5rem;
+    
+    width: 100%;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+}
+
+@keyframes change-gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+    25% {
+        background-position: 50% 25%;
+    }
+	50% {
+		background-position: 100% 50%;
+	}
+	75% {
+		background-position: 50% 25%;
+	}
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.user-section {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+
+.user-details {
+    margin: 0.25rem;
+    margin-right: 0;
+
+    background: rgba(0, 0, 0, 0.137);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.activity-container {
+    margin: 0.25rem;
+
+    border-radius: 10px;
+    background-color: #181513;
+
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+
+.activity-section {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    
+    background: url('../../assets/home-page/paint-splatter.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.activity-section::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 5%;
+    bottom: 0;
+    width: 0;
+    height: 90%;
+    border-right: 1px rgba(200, 182, 182, 0.3) solid;
+}
+
+.activity-title {
+    margin: 0;
+    font-size: 2.5rem;
+    padding: 2rem 6rem;
+}
+
+.activity-grid {
+    padding: 0 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.3rem;
+}
+
+.activity-item {
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.14);
+    
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    padding: 1rem 2rem;
+
+    height: 150px;
+}
+
+.activity-item:hover {
+    backdrop-filter: blur(0);
+}
+
+.single-activity-title {
+    font-size: 1.1rem;
+    padding-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.activity-item:hover {
+    cursor: pointer;
+}
+
+.activity-loading-spinner {
+    margin: 35% auto;
+}
+
+.paginator {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.page-number-container {
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-number {
+    color: black;
+    margin: 0;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.right-arrow, .left-arrow {
+    height: 2rem;
+}
+
+
+.pagination-arrow {
+    cursor: pointer;
+}
+
+.disabled {
+    color: #888882;
+    opacity: 0.5;
+    cursor: default;
+}
+
+.no-activity-prompt {
+    grid-column: span 2;
+    
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 4px;
+
+    background: rgba(110, 18, 18, 0.425);
+    
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-activity-prompt p {
+    font-size: 1.3rem;
+}
+
+.filter-wrapper {
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1550px) {
+    .user-section {
+        display: none;
+    }
+
+    .home-container-glow {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .activity-grid {
+        padding: 0 2rem;
+    }
+
+    .activity-title {
+        padding: 2rem;
+    }
+
+    .activity-container {
+        grid-template-columns: 5fr 2.5fr;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .activity-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-search-container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .search-section {
+        padding-top: 1rem;
+        border-top: 1px rgba(200, 182, 182, 0.3) solid;
+    }
+
+}
+
+@media screen and (max-width: 715px) { 
+    .activity-grid {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+    .activity-title {
+        padding: 1rem;
+    }
+
+}

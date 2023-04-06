@@ -1,0 +1,433 @@
+.individual-activity-container {
+    height: auto;
+    margin-top: 5rem;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.map-skeleton {
+    border-radius: 10px;
+    margin: 0.25rem;
+    background-color: #1f1f1f;
+    height: 820px;
+}
+
+.mapboxgl-map {
+    min-height: 820px;
+    height: calc(100% - 0.5rem);
+}
+
+.loading-spinner-container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-track-toggle-btn {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    border-radius: 20px;
+    z-index: 1000;
+    padding: 0.1rem 0.5rem;
+    outline: none;
+    font-weight: 500;
+    user-select: none;
+    vertical-align: text-top;
+}
+
+.music-track-toggle-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.music-track-toggle-btn:active {
+    padding: 0.05rem 0.35rem;
+}
+
+.btn-active {
+    background-color: var(--primary-col-orange);
+    color: black;
+}
+
+.btn-deactive {
+    background-color: var(--primary-col-dark);
+    color: white;
+}
+
+.centre-icon-top {
+    position: absolute;
+    right: 1rem;
+    top: 0.75rem;
+    z-index: 1000;
+}
+
+.centre-icon-bottom {
+    position: absolute;
+    right: 10rem;
+    top: 0.75rem;
+    z-index: 1000;
+}
+
+.centre-icon:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.centre-icon:active {
+    font-size: 0.95rem;
+}
+
+.hovered-music {
+    position: absolute;
+    right: 0.5rem;
+    top: 2.2rem;
+    z-index: 500;
+    width: 21rem;
+    height: 15vh;
+
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    display: flex;
+    font-size: 0.9rem;
+}
+
+.hovered-music img {
+    height: calc(100% - 0.5rem);
+    border-radius: 10px;
+    margin: 0.25rem;
+}
+
+.music-card-info-section {
+    width: 100%;
+    padding: 0.1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.music-card-info-section p {
+    margin: 0;
+    margin-bottom: 0.25rem;
+}
+
+.music-card-info-section p:first-of-type {
+    margin-bottom: 0.5rem;
+}
+
+.activity-info-section {
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.speed-chart-container {
+    background: rgba(255, 255, 255, 0.048);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    height: 50%;
+
+    margin-top: 3rem;
+    margin-left: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+
+    position:relative;
+}
+
+.chart-settings-section {
+    position: absolute;
+    width: calc(100% - 1rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset-map-icon {
+    position: relative;
+    top: 5px;
+}
+
+.show-all-btn {
+    border-radius: 20px;
+    padding: 0.1rem 0.5rem;
+    font-weight: 500;
+    user-select: none;
+    border: 1px solid black;
+    vertical-align: text-top;
+    color: black;
+}
+
+.show-all-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.show-all-btn:active {
+    font-size: 0.9rem;
+}
+
+.show-all-active {
+    background-color: var(--primary-col-dark);
+    color: white;
+}
+
+.reset-map-icon:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.reset-map-icon:active {
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.speed-chart {
+    padding-top: 1.7rem;
+}
+
+.speed-chart:hover {
+    cursor: grab;
+}
+
+.speed-chart:active {
+    cursor: grabbing;
+}
+
+.radio-btn-container {
+    display: flex;
+}
+
+.radio-btn-container input {
+    height: 1rem;
+    accent-color: black;
+}
+
+.input-container {
+    display: flex;
+    padding-right: 0.5rem;
+}
+
+
+.mouse-position-info-card {
+    position: absolute;
+    right: 0.5rem;
+    top: calc(15vh + 2.5rem);
+    z-index: 500;
+    width: 9rem;
+
+
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.mouse-position-info-card p {
+    margin: 0 auto;
+}
+
+.music-info-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity-info-section .no-music-found {
+    font-size: 3rem;
+    padding: 3rem;
+}
+
+.up-arrow{
+    margin: 1rem;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--primary-col-dark); 
+    position: relative;
+    animation: bounce-down 1.5s ease-in-out infinite, slide-down 0.4s ease-out;
+}
+
+.down-arrow{
+    margin: 1rem;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--primary-col-dark); 
+    position: relative;
+    animation: bounce-up 1.5s ease-in-out infinite, slide-up 0.4s ease-out;  
+}
+
+.slide-up {
+    position: relative;
+    animation: slide-up 0.4s ease-out;
+}
+
+.up-arrow {
+    margin-bottom: 0;
+}
+
+.arrow-container svg:hover {
+    cursor: pointer;
+    color: white;
+}
+
+@keyframes bounce-up {
+    0% {
+    transform: translateY(-10px);
+    }
+    50% {
+    transform: translateY(0);
+    }
+    100% {
+    transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce-down {
+    0% {
+    transform: translateY(10px);
+    }
+    50% {
+    transform: translateY(0);
+    }
+    100% {
+    transform: translateY(10px);
+    }
+}
+  
+@keyframes slide-up {
+0% {
+    opacity: 0;
+    transform: translateY(100%);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .individual-activity-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .mapboxgl-map {
+        min-height: 40rem;
+        height: 40rem;
+        order: 1;
+    }
+
+    .activity-info-section {
+        order: 2;
+    }
+
+    .speed-chart-container {
+        height: 30rem;
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+    }
+    
+    .music-info-spinner {
+        order: 2;
+        height: 15rem;
+    }
+
+    .music-carousel {
+        height: auto;
+        margin-top: 1.5rem !important;
+        order: 3;
+        margin-bottom: 4rem;
+    }
+
+    .music-track-toggle-btn, .centre-icon {
+        z-index: 998;
+    }
+
+    .map-skeleton {
+        height: 40rem;
+    }
+
+    .music-information-card-container {
+        width: 80%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 1rem 0;
+    }
+
+    .down-arrow{
+        margin-bottom: 0;
+    }
+}
+
+
+@media screen and (max-width: 850px) { 
+    .mapboxgl-map {
+        height: 30rem;
+        min-height: 30rem;
+    }
+
+    .map-skeleton {
+        height: 30rem;
+    }
+
+    .speed-chart-container {
+        height: 25rem;
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 480px) { 
+    .speed-chart-container {
+        height: 20rem;
+        width: calc(100% - 0.5rem);
+        margin: 0.25rem;
+    }
+    
+    .up-arrow, .down-arrow {
+        font-size: 2.5rem;
+    }
+
+    .music-carousel {
+        margin-top: 0 !important;
+    }
+}

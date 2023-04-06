@@ -1,0 +1,32 @@
+
+.user-pfp {
+    display: flex;
+    flex-direction: column;
+
+    height: 97%;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0.25rem;
+    margin-right: 0;
+
+    background: rgba(0, 0, 0, 0.137);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    padding: 1rem;
+}
+
+.user-pfp-img{
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.profile-text {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+}
+

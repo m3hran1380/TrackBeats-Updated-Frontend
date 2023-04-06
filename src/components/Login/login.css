@@ -1,0 +1,49 @@
+
+.hero-section {
+  display: flex;
+  flex-grow: 1;
+}
+
+.hero-img-section {
+  height: 100%;
+}
+
+.hero-img-section img {
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  position: relative;
+  left: 15%;
+}
+
+.hero-text-section {
+  position: relative;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta-btn {
+  margin-top: 1rem;
+  padding: 0;
+  width: 350px;
+  height: 4rem;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  background-color: var(--primary-col-orange);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.25s ease-in-out; 
+}
+
+
+
+.cta-btn:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+body {
+  overflow: hidden;
+}
