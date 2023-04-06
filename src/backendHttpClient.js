@@ -8,7 +8,7 @@ export const getBackendHttpClient = () => {
     const httpClient = axios.create(
         {
             withCredentials: true,
-            baseURL: "http://localhost:5000/"
+            baseURL: "https://trackbeats-backend.herokuapp.com/"
         }
     )
 
